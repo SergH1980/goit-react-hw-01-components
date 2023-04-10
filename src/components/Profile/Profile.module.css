@@ -1,3 +1,7 @@
+body {
+  background-color: blanchedalmond;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
