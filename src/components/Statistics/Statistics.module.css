@@ -16,10 +16,10 @@
   margin-bottom: 40px;
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(242, 162, 12);
+  color: rgb(255, 183, 50);
   font-size: 30px;
   font-style: italic;
-  -webkit-text-stroke: 2px rgb(125, 174, 158);
+  letter-spacing: 3px;
 }
 .statList {
   list-style: none;
