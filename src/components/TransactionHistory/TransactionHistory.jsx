@@ -24,7 +24,13 @@ export const TransactionHistory = ({ items }) => {
   );
 };
 
-// "id": "1e0700a2-5183-4291-85cc-2065a036a683",
-// "type": "invoice",
-// "amount": "964.82",
-// "currency": "LRD"
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+};
