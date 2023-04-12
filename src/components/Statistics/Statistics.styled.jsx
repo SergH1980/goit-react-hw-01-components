@@ -1,4 +1,6 @@
-.statistics {
+import styled from '@emotion/styled';
+
+export const StatisticsSection = styled.section`
   background-color: rgb(219, 238, 212);
   width: 450px;
   margin: 0 auto;
@@ -9,9 +11,9 @@
   border-radius: 5px;
   box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
   overflow: auto;
-}
+`;
 
-.title {
+export const StatisticsTitle = styled.h2`
   text-align: center;
   margin-bottom: 40px;
 
@@ -20,8 +22,9 @@
   font-size: 30px;
   font-style: italic;
   letter-spacing: 3px;
-}
-.statList {
+`;
+
+export const StatList = styled.ul`
   list-style: none;
   display: flex;
 
@@ -29,8 +32,9 @@
   align-items: center;
   padding-left: 0;
   margin: 0;
-}
-.item {
+`;
+
+export const StatItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,18 +48,19 @@
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgb(208, 255, 255);
   overflow: auto;
-}
 
-.item:not(:last-child) {
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-}
+  :not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+`;
 
-.label {
+export const StatName = styled.span`
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 15px;
-}
-.percentage {
+`;
+
+export const StatPercentage = styled.span`
   font-weight: 600;
   font-size: 20px;
-}
+`;

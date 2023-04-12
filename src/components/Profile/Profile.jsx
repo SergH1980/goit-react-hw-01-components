@@ -1,31 +1,43 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
+
+import {
+  ProfileGeneral,
+  ProfileDescription,
+  ProfileImage,
+  ProfileName,
+  ProfileTag,
+  ProfileLocation,
+  ProfileStats,
+  ProfileStatWrap,
+  ProfileStatName,
+  ProfileStatValue,
+} from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt="User avatar" className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <ProfileGeneral>
+      <ProfileDescription>
+        <ProfileImage src={avatar} alt="User avatar" />
+        <ProfileName>{username}</ProfileName>
+        <ProfileTag>@{tag}</ProfileTag>
+        <ProfileLocation>{location}</ProfileLocation>
+      </ProfileDescription>
 
-      <ul className={css.stats}>
-        <li className={css.wrap}>
-          <span className={css.label}>Followers </span>
-          <span className={css.quantity}>{stats.followers}</span>
-        </li>
-        <li className={css.wrap}>
-          <span className={css.label}>Views </span>
-          <span className={css.quantity}>{stats.views}</span>
-        </li>
-        <li className={css.wrap}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <ProfileStats>
+        <ProfileStatWrap>
+          <ProfileStatName>Followers </ProfileStatName>
+          <ProfileStatValue>{stats.followers}</ProfileStatValue>
+        </ProfileStatWrap>
+        <ProfileStatWrap>
+          <ProfileStatName>Views </ProfileStatName>
+          <ProfileStatValue>{stats.views}</ProfileStatValue>
+        </ProfileStatWrap>
+        <ProfileStatWrap>
+          <ProfileStatName>Likes</ProfileStatName>
+          <ProfileStatValue>{stats.likes}</ProfileStatValue>
+        </ProfileStatWrap>
+      </ProfileStats>
+    </ProfileGeneral>
   );
 };
 
