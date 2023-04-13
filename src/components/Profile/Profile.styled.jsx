@@ -11,10 +11,14 @@ export const ProfileGeneral = styled.div`
   padding-top: 30px;
   margin-bottom: 50px;
 
-  background-color: rgb(219, 238, 212);
+  background-color: ${p => {
+    return p.theme.colors.mainBackground;
+  }};
   border-radius: 10px;
 
-  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: ${p => {
+    return p.theme.shadow.box;
+  }};
   overflow: auto;
 `;
 
@@ -26,15 +30,10 @@ export const ProfileDescription = styled.div`
 `;
 
 export const ProfileImage = styled.img`
-  --s: 150px; /* the size of the image */
-  --b: 8px; /* the border thickness*/
-  --g: 0px; /* the gap */
-  --c: rgb(71, 110, 110); /* the color */
+  width: 150px;
 
-  width: var(--s);
-
-  outline: calc(var(--s) / 2) solid #0009;
-  outline-offset: calc(var(--s) / -2);
+  outline: calc(150px / 2) solid #0004;
+  outline-offset: calc(150px / -2);
   cursor: pointer;
   transition: 0.2s;
 
@@ -43,18 +42,26 @@ export const ProfileImage = styled.img`
   justify-content: center;
   height: 150px;
   border-radius: 50%;
-  background-color: rgb(125, 174, 158);
-  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+  background-color: ${p => {
+    return p.theme.colors.textColor;
+  }};
+  box-shadow: ${p => {
+    return p.theme.shadow.box;
+  }};
 
   &:hover {
-    outline: var(--b) solid var(--c);
-    outline-offset: var(--g);
+    outline: 8px solid ${p => {
+      return p.theme.colors.titleColor;
+    }};);
+    outline-offset: 0px;
   }
 `;
 
 export const ProfileName = styled.p`
   font-size: 40px;
-  color: rgb(71, 110, 110);
+  color: ${p => {
+    return p.theme.colors.titleColor;
+  }};
   font-weight: 600;
 `;
 
@@ -62,7 +69,9 @@ export const ProfileTag = styled.p`
   margin-top: 0px;
   font-size: 20px;
   font-weight: 600;
-  color: rgb(255, 183, 50);
+  color: ${p => {
+    return p.theme.colors.accentColor;
+  }}; ;
 `;
 
 export const ProfileLocation = styled.p`
@@ -79,7 +88,9 @@ export const ProfileStats = styled.ul`
   margin-bottom: 0;
   padding-left: 0;
   min-width: 320px;
-  background-color: rgb(208, 255, 255);
+  background-color: ${p => {
+    return p.theme.colors.secondaryBackground;
+  }};
 
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 `;

@@ -5,16 +5,20 @@ export const TransactionTable = styled.table`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  background-color: azure;
+
   justify-content: center;
   align-items: center;
 
-  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: ${p => {
+    return p.theme.shadow.box;
+  }};
 `;
 
 export const TableHeader = styled.thead`
   width: 100%;
-  background-color: rgb(71, 110, 110);
+  background-color: ${p => {
+    return p.theme.colors.titleColor;
+  }};
 `;
 
 export const TableHeaderList = styled.tr`
@@ -28,22 +32,30 @@ export const TableHeaderItem = styled.th`
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 5px 0px;
   font-size: 20px;
-  color: rgb(255, 183, 50);
+  color: ${p => {
+    return p.theme.colors.accentColor;
+  }};
 `;
 
 export const TableTransactionsData = styled.tbody`
-  background-color: rgb(219, 238, 212);
+  background-color: ${p => {
+    return p.theme.colors.mainBackground;
+  }};
   width: 100%;
 `;
 
 export const TableStatisticsItem = styled.tr`
   display: flex;
   :nth-of-type(2n) {
-    background-color: rgb(208, 255, 255);
+    background-color: ${p => {
+      return p.theme.colors.secondaryBackground;
+    }};
   }
 
   :hover {
-    background-color: white;
+    background-color: ${p => {
+      return p.theme.colors.white;
+    }};
   }
 `;
 
@@ -69,8 +81,12 @@ export const TableStatisticsValue = styled.td`
   }
 
   :hover {
-    box-shadow: inset 0px 0px 4px 2px rgba(146, 145, 145, 0.59);
-    background-color: rgb(96, 94, 94);
+    box-shadow: ${p => {
+      return p.theme.shadow.inset;
+    }};
+    background-color: ${p => {
+      return p.theme.colors.tableHighlight;
+    }};
     color: white;
   }
 `;

@@ -1,4 +1,6 @@
-.friendList {
+import styled from '@emotion/styled';
+
+export const FriendListContainer = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,8 +13,12 @@
 
   width: 320px;
   border-radius: 5px;
-  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
-  background-color: rgb(219, 238, 212);
+  box-shadow: ${p => {
+    return p.theme.shadow.box;
+  }};
+  background-color: ${p => {
+    return p.theme.colors.mainBackground;
+  }};
 
   list-style: none;
-}
+`;

@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 
 export const StatisticsSection = styled.section`
-  background-color: rgb(219, 238, 212);
+  background-color: ${p => {
+    return p.theme.colors.mainBackground;
+  }};
   width: 450px;
   margin: 0 auto;
 
@@ -9,7 +11,9 @@ export const StatisticsSection = styled.section`
   margin-bottom: 50px;
 
   border-radius: 5px;
-  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: ${p => {
+    return p.theme.shadow.box;
+  }};
   overflow: auto;
 `;
 
@@ -18,7 +22,9 @@ export const StatisticsTitle = styled.h2`
   margin-bottom: 40px;
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(71, 110, 110);
+  color: ${p => {
+    return p.theme.colors.titleColor;
+  }};
   font-size: 30px;
   font-style: italic;
   letter-spacing: 3px;
@@ -46,7 +52,9 @@ export const StatItem = styled.li`
   padding-top: 20px;
 
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgb(208, 255, 255);
+  background-color: ${p => {
+    return p.theme.colors.secondaryBackground;
+  }};
   overflow: auto;
 
   :not(:last-child) {
