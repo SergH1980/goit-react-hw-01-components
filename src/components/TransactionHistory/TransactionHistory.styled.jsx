@@ -34,17 +34,12 @@ export const TableHeaderItem = styled.th`
 export const TableTransactionsData = styled.tbody`
   background-color: rgb(219, 238, 212);
   width: 100%;
-
-  :nth-child(2n) {
-    background-color: rgb(208, 255, 255);
-  }
 `;
 
 export const TableStatisticsItem = styled.tr`
   display: flex;
-
-  :nth-child(2n) {
-    background-color: rgb(219, 238, 212);
+  :nth-of-type(2n) {
+    background-color: rgb(208, 255, 255);
   }
 
   :hover {
@@ -64,12 +59,12 @@ export const TableStatisticsValue = styled.td`
 
   text-transform: capitalize;
 
-  :nth-child(2) {
+  :nth-of-type(2) {
     font-size: 14px;
   }
 
-  :first-child,
-  :nth-child(3) {
+  :first-of-type,
+  :nth-of-type(3) {
     font-weight: 600;
   }
 
