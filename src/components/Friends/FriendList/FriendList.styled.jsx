@@ -7,18 +7,18 @@ export const FriendListContainer = styled.ul`
   align-items: center;
   gap: 15px;
 
+  overflow: auto;
+
   margin: 0 auto;
   padding: 0px 0px;
   margin-bottom: 50px;
 
   width: 320px;
-  border-radius: 5px;
+  border-radius: ${p => p.theme.border.radius};
   box-shadow: ${p => {
     return p.theme.shadow.box;
   }};
-  background-color: ${p => {
-    return p.theme.colors.mainBackground;
-  }};
+  background-color: ${p => p.theme.colors.mainBackground};
 
   list-style: none;
 `;

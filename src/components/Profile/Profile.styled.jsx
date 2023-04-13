@@ -11,14 +11,12 @@ export const ProfileGeneral = styled.div`
   padding-top: 30px;
   margin-bottom: 50px;
 
-  background-color: ${p => {
-    return p.theme.colors.mainBackground;
+  background-color: ${p => p.theme.colors.mainBackground};
+  border-radius: ${p => {
+    return p.theme.border.radius;
   }};
-  border-radius: 10px;
 
-  box-shadow: ${p => {
-    return p.theme.shadow.box;
-  }};
+  box-shadow: ${p => p.theme.shadow.box};
   overflow: auto;
 `;
 
@@ -42,26 +40,20 @@ export const ProfileImage = styled.img`
   justify-content: center;
   height: 150px;
   border-radius: 50%;
-  background-color: ${p => {
-    return p.theme.colors.textColor;
-  }};
+  background-color: ${p => p.theme.colors.textColor};
   box-shadow: ${p => {
     return p.theme.shadow.box;
   }};
 
   &:hover {
-    outline: 8px solid ${p => {
-      return p.theme.colors.titleColor;
-    }};);
+    outline: 8px solid ${p => p.theme.colors.titleColor};
     outline-offset: 0px;
   }
 `;
 
 export const ProfileName = styled.p`
   font-size: 40px;
-  color: ${p => {
-    return p.theme.colors.titleColor;
-  }};
+  color: ${p => p.theme.colors.titleColor};
   font-weight: 600;
 `;
 
@@ -69,9 +61,7 @@ export const ProfileTag = styled.p`
   margin-top: 0px;
   font-size: 20px;
   font-weight: 600;
-  color: ${p => {
-    return p.theme.colors.accentColor;
-  }}; ;
+  color: ${p => p.theme.colors.accentColor}; ;
 `;
 
 export const ProfileLocation = styled.p`
@@ -88,11 +78,9 @@ export const ProfileStats = styled.ul`
   margin-bottom: 0;
   padding-left: 0;
   min-width: 320px;
-  background-color: ${p => {
-    return p.theme.colors.secondaryBackground;
-  }};
+  background-color: ${p => p.theme.colors.secondaryBackground};
 
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: ${p => p.theme.border.separator}; ;
 `;
 
 export const ProfileStatWrap = styled.li`
@@ -107,7 +95,7 @@ export const ProfileStatWrap = styled.li`
   padding-bottom: 15px;
 
   &:not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: ${p => p.theme.border.separator};
   }
 `;
 

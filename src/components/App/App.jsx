@@ -6,12 +6,13 @@ import { FriendList } from '../Friends/FriendList/FriendList';
 import friends from '../JSON/friends.json';
 import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
 import transactionHistory from '../JSON/transactions.json';
-
 import { Container } from './App.styled';
+import { GlobalStyle } from 'components/GlobalStyle';
 
 export const App = () => {
   return (
     <Container>
+      <GlobalStyle />
       <Profile
         username={user.username}
         tag={user.tag}

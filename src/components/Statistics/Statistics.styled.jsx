@@ -1,19 +1,15 @@
 import styled from '@emotion/styled';
 
 export const StatisticsSection = styled.section`
-  background-color: ${p => {
-    return p.theme.colors.mainBackground;
-  }};
+  background-color: ${p => p.theme.colors.mainBackground};
   width: 450px;
   margin: 0 auto;
 
   padding-top: 20px;
   margin-bottom: 50px;
 
-  border-radius: 5px;
-  box-shadow: ${p => {
-    return p.theme.shadow.box;
-  }};
+  border-radius: ${p => p.theme.border.radius};
+  box-shadow: ${p => p.theme.shadow.box};
   overflow: auto;
 `;
 
@@ -22,9 +18,7 @@ export const StatisticsTitle = styled.h2`
   margin-bottom: 40px;
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: ${p => {
-    return p.theme.colors.titleColor;
-  }};
+  color: ${p => p.theme.colors.titleColor};
   font-size: 30px;
   font-style: italic;
   letter-spacing: 3px;
@@ -51,14 +45,12 @@ export const StatItem = styled.li`
   padding-bottom: 20px;
   padding-top: 20px;
 
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: ${p => {
-    return p.theme.colors.secondaryBackground;
-  }};
+  border-top: ${p => p.theme.border.separator};
+  background-color: ${p => p.theme.colors.secondaryBackground};
   overflow: auto;
 
   :not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: ${p => p.theme.border.separator};
   }
 `;
 

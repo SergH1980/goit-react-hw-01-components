@@ -9,16 +9,12 @@ export const TransactionTable = styled.table`
   justify-content: center;
   align-items: center;
 
-  box-shadow: ${p => {
-    return p.theme.shadow.box;
-  }};
+  box-shadow: ${p => p.theme.shadow.box};
 `;
 
 export const TableHeader = styled.thead`
   width: 100%;
-  background-color: ${p => {
-    return p.theme.colors.titleColor;
-  }};
+  background-color: ${p => p.theme.colors.titleColor};
 `;
 
 export const TableHeaderList = styled.tr`
@@ -32,30 +28,22 @@ export const TableHeaderItem = styled.th`
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 5px 0px;
   font-size: 20px;
-  color: ${p => {
-    return p.theme.colors.accentColor;
-  }};
+  color: ${p => p.theme.colors.accentColor};
 `;
 
 export const TableTransactionsData = styled.tbody`
-  background-color: ${p => {
-    return p.theme.colors.mainBackground;
-  }};
+  background-color: ${p => p.theme.colors.mainBackground};
   width: 100%;
 `;
 
 export const TableStatisticsItem = styled.tr`
   display: flex;
   :nth-of-type(2n) {
-    background-color: ${p => {
-      return p.theme.colors.secondaryBackground;
-    }};
+    background-color: ${p => p.theme.colors.secondaryBackground};
   }
 
   :hover {
-    background-color: ${p => {
-      return p.theme.colors.white;
-    }};
+    background-color: ${p => p.theme.colors.white};
   }
 `;
 
@@ -84,9 +72,7 @@ export const TableStatisticsValue = styled.td`
     box-shadow: ${p => {
       return p.theme.shadow.inset;
     }};
-    background-color: ${p => {
-      return p.theme.colors.tableHighlight;
-    }};
+    background-color: ${p => p.theme.colors.tableHighlight};
     color: white;
   }
 `;

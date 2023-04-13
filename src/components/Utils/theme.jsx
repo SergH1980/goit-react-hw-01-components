@@ -12,9 +12,8 @@ export const theme = {
     box: `0px 0px 4px 2px rgba(0, 0, 0, 0.2)`,
     inset: `inset 0px 0px 8px 3px rgb(71, 110, 110)`,
   },
+  border: {
+    radius: `10px`,
+    separator: `1px solid rgba(0, 0, 0, 0.2)`,
+  },
 };
-//
-//     borders: {
-//       radius: 10px,
-//       separator: 1px solid rgba(0, 0, 0, 0.2),
-//   },
