@@ -30,7 +30,6 @@ export const StatList = styled.ul`
 
   justify-content: center;
   align-items: center;
-  // padding-left: 0;
   margin: 0;
 `;
 
@@ -46,7 +45,6 @@ export const StatItem = styled.li`
   padding-top: 20px;
 
   border-top: ${p => p.theme.border.separator};
-  background-color: ${p => p.theme.colors.secondaryBackground};
   overflow: auto;
 
   :not(:last-child) {

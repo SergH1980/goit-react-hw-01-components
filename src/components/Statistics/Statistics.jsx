@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { setBg } from 'components/Utils/RandomColors';
 
 import {
   StatisticsSection,
@@ -16,7 +17,12 @@ export const Statistics = ({ title, stats }) => {
 
       <StatList>
         {stats.map(stat => (
-          <StatItem key={stat.id}>
+          <StatItem
+            key={stat.id}
+            style={{
+              backgroundColor: `#${setBg()}`,
+            }}
+          >
             <StatName>{stat.label} </StatName>
             <StatPercentage>{stat.percentage}%</StatPercentage>
           </StatItem>
