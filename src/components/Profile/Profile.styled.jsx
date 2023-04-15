@@ -7,7 +7,7 @@ export const ProfileGeneral = styled.div`
   justify-content: center;
 
   margin: 0 auto;
-  width: 320px;
+  max-width: 320px;
   padding-top: 30px;
   margin-bottom: 50px;
 

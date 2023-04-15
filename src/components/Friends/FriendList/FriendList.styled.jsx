@@ -13,7 +13,7 @@ export const FriendListContainer = styled.ul`
   padding: 0px 0px;
   margin-bottom: 50px;
 
-  width: 320px;
+  max-width: 320px;
   border-radius: ${p => p.theme.border.radius};
   box-shadow: ${p => {
     return p.theme.shadow.box;

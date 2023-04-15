@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const TransactionTable = styled.table`
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;

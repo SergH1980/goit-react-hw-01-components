@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const StatisticsSection = styled.section`
   background-color: ${p => p.theme.colors.mainBackground};
-  width: 450px;
+  max-width: 450px;
   margin: 0 auto;
 
   padding-top: 20px;
@@ -30,7 +30,7 @@ export const StatList = styled.ul`
 
   justify-content: center;
   align-items: center;
-  padding-left: 0;
+  // padding-left: 0;
   margin: 0;
 `;
 
