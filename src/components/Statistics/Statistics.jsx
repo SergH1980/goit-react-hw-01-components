@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { setBg } from 'components/Utils/RandomColors';
+import { setBg } from 'Utils/RandomColors';
 
 import {
   StatisticsSection,
@@ -13,8 +13,7 @@ import {
 export const Statistics = ({ title, stats }) => {
   return (
     <StatisticsSection>
-      <StatisticsTitle>{title}</StatisticsTitle>
-
+      {title && <StatisticsTitle>{title}</StatisticsTitle>}
       <StatList>
         {stats.map(stat => (
           <StatItem
@@ -33,7 +32,7 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

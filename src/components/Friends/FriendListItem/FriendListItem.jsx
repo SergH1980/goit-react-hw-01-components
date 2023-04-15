@@ -7,9 +7,9 @@ import {
   FriendName,
 } from './FriendListItem.styled';
 
-export const FriendsListItem = ({ avatar, name, isOnline, id }) => {
+export const FriendsListItem = ({ avatar, name, isOnline }) => {
   return (
-    <FriendCard key={id}>
+    <FriendCard>
       <FriendOnlineStatus isOnline={isOnline}></FriendOnlineStatus>
       <FriendAvatar src={avatar} alt="User avatar" width="48" />
       <FriendName>{name}</FriendName>

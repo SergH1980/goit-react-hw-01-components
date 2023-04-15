@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { SingleTransaction } from '../SingleTransaction/SingleTransaction';
 
 import {
   TransactionTable,
@@ -6,8 +7,6 @@ import {
   TableHeaderList,
   TableHeaderItem,
   TableTransactionsData,
-  TableStatisticsItem,
-  TableStatisticsValue,
 } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
@@ -44,21 +43,4 @@ TransactionHistory.propTypes = {
       currency: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
-};
-
-const SingleTransaction = ({ id, type, amount, currency }) => {
-  return (
-    <TableStatisticsItem>
-      <TableStatisticsValue>{type}</TableStatisticsValue>
-      <TableStatisticsValue>{amount}</TableStatisticsValue>
-      <TableStatisticsValue>{currency}</TableStatisticsValue>
-    </TableStatisticsItem>
-  );
-};
-
-SingleTransaction.propTypes = {
-  id: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  currency: PropTypes.string.isRequired,
 };
